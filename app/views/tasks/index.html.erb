@@ -1,0 +1,10 @@
+<div class="header"><h2> My tasks </h2>
+<button><%= link_to "Create new", "/new" %></button>
+</div>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><p class="task-title"><%= link_to task.title, task_path(task) %></p>
+    <%= link_to "delete", delete_path(task), method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </li>
+  <% end %>
+</ul>

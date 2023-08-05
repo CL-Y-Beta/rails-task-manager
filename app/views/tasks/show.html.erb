@@ -1,0 +1,22 @@
+
+
+<div class="header"><h2><%= @task.title %></h2>
+
+<p><%= link_to "Edit Task", edit_path %></p>
+<p>
+  <% if @task.completed == true %>
+    <b><%= "Complete" %></b>
+  <% else %>
+    <b><%= "Incomplete" %></b>
+  <% end %>
+</p>
+</div>
+
+<div class="card">
+<%= @task.details %>
+</div>
+
+
+
+
+<p><%= link_to "Back to all tasks", root_path %></p>
