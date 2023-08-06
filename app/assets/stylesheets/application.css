@@ -16,7 +16,7 @@
 
  body {
   background-color: rgb(241, 241, 241);
-
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
 
  h1 {
@@ -52,6 +52,18 @@
   justify-content: space-between;
  }
 
+ .header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Additional styles to make the text centered within its container */
+}
+
+
+ .header-left h2 {
+  margin-right: 20px;
+ }
+
  li {
   margin: 20px 0px 0px 0px;
   display: flex;
@@ -64,13 +76,13 @@
  }
 
  .card {
-  background-color: rgb(189, 183, 175);
-  border-radius: 10px;
+  background-color: #cdc2c2;
+  border-radius: 5px;
   padding: 30px;
  }
 
  .container {
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   width: 100%;
   align-content: center;
@@ -91,4 +103,89 @@ button {
   color: #333; /* Text color */
   font-weight: bold;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #bab1a5;
+}
+
+.task-title a:hover {
+  color:rgb(134, 120, 99);
+  font-size: 24px;
+}
+
+#details {
+  color:rgb(97, 85, 83);
+}
+
+.form-container {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+ }
+
+.form-container .center-form {
+  width: 50%;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.form-row-checkbox {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Align items vertically in the row */
+  padding-bottom: 20px;
+}
+
+
+.form-row-checkbox label {
+  color: #62584c;
+  flex-basis: 100px; /* Adjust the width of labels as needed */
+  padding-right: 10px;
+}
+
+.form-row label {
+  color: #62584c;
+  flex-basis: 100px; /* Adjust the width of labels as needed */
+  padding-right: 10px;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-row textarea,
+.form-row input[type="text"] {
+  background-color: #cdc2c2;
+  border: none;
+  color:#62584c;
+  padding: 0.8rem;
+}
+
+.form-row textarea:focus,
+.form-row input[type="text"]:focus {
+  outline: #5b5956;
+}
+
+
+
+.create-button {
+  background-color: #8c7c7c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.create-button:hover {
+  background-color: #8d6868;
 }

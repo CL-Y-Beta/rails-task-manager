@@ -1,9 +1,20 @@
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
+<div class= "form-container">
+  <div class="center-form">
+    <%= form_with model: @task do |f| %>
+      <div class="form-row">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="form-row">
+        <%= f.label :details %>
+        <%= f.text_area :details, rows: 6 %>
+      </div>
+      <div class="form-row">
+        <%= f.submit "Create Task", class: "create-button" %>
+      </div>
+    <% end %>
 
-<p><%= link_to "Back to all tasks", root_path %></p>
+
+  <p><%= link_to "Back to all tasks", root_path %></p>
+  </div>
+</div>
